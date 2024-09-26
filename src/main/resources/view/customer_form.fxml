@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="616.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project.controller.CustomerFormController">
+   <children>
+      <Label layoutX="377.0" layoutY="46.0" text="Customer Form">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="126.0" text="Customer Id - " />
+      <TextField fx:id="txtcId" layoutX="94.0" layoutY="148.0" onAction="#cidOnAction" prefHeight="31.0" prefWidth="302.0" promptText="\@customer id" />
+      <Label layoutX="526.0" layoutY="126.0" text="Customer Name - " />
+      <TextField fx:id="txtcName" layoutX="526.0" layoutY="148.0" onAction="#cNameOnAction" prefHeight="31.0" prefWidth="302.0" promptText="\@customer name" />
+      <Label layoutX="94.0" layoutY="195.0" text="Customer Address - " />
+      <TextField fx:id="txtcAddress" layoutX="94.0" layoutY="217.0" onAction="#cAddressOnAction" prefHeight="31.0" prefWidth="302.0" promptText="\@customer address" />
+      <Label layoutX="526.0" layoutY="195.0" text="Customer Tel - " />
+      <TextField fx:id="txtcTel" layoutX="526.0" layoutY="217.0" onAction="#cTelOnAction" prefHeight="31.0" prefWidth="302.0" promptText="\@customer telephone" />
+      <Button layoutX="541.0" layoutY="270.0" mnemonicParsing="false" onAction="#btnSaveOnAction" text="Save" />
+      <Button layoutX="609.0" layoutY="270.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" text="Update" />
+      <Button layoutX="696.0" layoutY="270.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" text="Delete" />
+      <Button layoutX="775.0" layoutY="270.0" mnemonicParsing="false" onAction="#btnClearOnAction" text="Clear" />
+      <TableView fx:id="tblCustomer" layoutX="90.0" layoutY="326.0" prefHeight="200.0" prefWidth="739.0">
+        <columns>
+          <TableColumn fx:id="colCid" prefWidth="103.0" text="Customer Id" />
+          <TableColumn fx:id="colCname" prefWidth="288.0" text="Customer Name" />
+            <TableColumn fx:id="colCaddress" prefWidth="190.0" text="Customer Address" />
+            <TableColumn fx:id="colCtel" prefWidth="157.0" text="Customer Telephone" />
+        </columns>
+      </TableView>
+      <Button layoutX="407.0" layoutY="148.0" mnemonicParsing="false" onAction="#btnSerachOnAction" text="Search" />
+   </children>
+</AnchorPane>
